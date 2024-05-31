@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  background-color: white;
+  color: #464955;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  transition: 0.3s all;
+}
+
+section {
+  padding: 20px 0;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  height: 100vh !important;
+  width: 100vw !important;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 6vw;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+#view-3d-controls-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+#view-3d-controls-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#car-color-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+#car-color-controls ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#car-color-controls ul li {
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.car-color-red-li-item:hover {
+  background-color: #fe4443;
+  cursor: pointer;
+  color: white;
+}
+
+.car-color-blue-li-item:hover {
+  background-color: blue;
+  cursor: pointer;
+  color: white;
+}
+
+.car-color-yellow-li-item:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.car-color-black-li-item:hover {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+}
+
+/* #car-color-controls ul li:hover {
+  cursor: pointer;
+} */
+
+#hero-section {
+  position: relative;
+  height: 100vh;
+  transition: transform 330ms ease-in-out;
+}
+
+.hero-section-author {
+  font-weight: 500;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+.hero-section-inner h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.hero-section-inner h3 {
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+.hero-section-inner h1 span {
+  color: #fe4443;
+}
+
+.hero-section-inner h1 {
+  position: relative;
+}
+
+.hero-section-inner h1::before {
+  width: 100%;
+  content: 'Mercedes-Benz';
+  position: absolute;
+  z-index: -1;
+  top: 15px;
+  left: 0;
+  right: 0;
+  letter-spacing: 10px;
+  font-size: 7vw;
+  text-align: center;
+  color: #f0efef;
+  opacity: 0.5;
+}
+
+.hero-section-car-specification {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10vh;
+  z-index: 100;
+}
+
+.hero-section-car-specification ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 7vw;
+}
+
+.hero-section-car-specification ul li {
+  font-size: 1.8vw;
+}
+
+.hero-section-car-specification ul li span {
+  color: #fe4443;
+  font-weight: 700;
+}
+
+/* ----------------------------------- */
+
+#warning {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 110;
+  color: #ce4233;
+  font-weight: 500;
+  font-size: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 110;
+}
+
+.loader-text {
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  z-index: 120;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ce4233;
+  letter-spacing: 0.2em;
+}
+
+.loader-text::before,
+.loader-text::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #ce4233;
+  position: absolute;
+  animation: load 0.7s infinite alternate ease-in-out;
+}
+
+.loader-text::before {
+  top: 0;
+}
+
+.loader-text::after {
+  bottom: 0;
+}
+
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}
+
+/* ----------------------------------- */
+
+.move {
+  transform: translateX(-100vw);
+}
+
+.hide {
+  visibility: hidden;
+}

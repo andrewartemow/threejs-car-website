@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="warning" class="hide">
+      Please, make sure you open website on desktop
+    </div>
+    <div id="loader">
+      <div class="loader-text">LOADING...</div>
+    </div>
+    <button id="view-3d-controls-btn">View3D</button>
+    <section id="hero-section">
+      <div id="car-color-controls">
+        <ul>
+          <li class="car-color-red-li-item">Red</li>
+          <li class="car-color-blue-li-item">Blue</li>
+          <li class="car-color-yellow-li-item">Yellow</li>
+          <li class="car-color-black-li-item">Black</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="hero-section-inner">
+          <h2 class="hero-section-author">Mercedes-Benz</h2>
+          <h1>300 SL: <span>Gullwing</span></h1>
+          <h3>An experience so Beautiful that even the God envy.</h3>
+          <div class="hero-section-car-specification">
+            <ul>
+              <li>Speed<br /><span>210</span>KM/S</li>
+              <li>Type<br /><span>Sport</span></li>
+              <li>MRPS* Starting at<br /><span>$28,995</span></li>
+              <li>Fuel<br /><span>Gasoline</span></li>
+              <li>Capacity<br /><span>500</span>Hack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
